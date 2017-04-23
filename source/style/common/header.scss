@@ -1,0 +1,99 @@
+.header {
+  background-color: $black;
+  color: $white;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 22px 80px 15px;
+     @include desctop() {
+      padding: 20px 50px 15px;
+    }
+    @include tablets() {
+      padding: 20px;
+      padding-bottom: 15px;
+    }
+    @include phones() {
+      padding: 15px 20px;
+    }
+  }
+  &__logo {
+    flex-grow: 1;
+  }
+}
+.logo {
+  color: $white;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__img {
+    width: 54px;
+    height: 26px;
+    background: url('../images/logo.png') no-repeat 0 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+  &__name {
+    @include BebasNeueBook();
+    font-size: 28px;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    @include minDesctop() {
+      font-size: 26px;
+    }
+    @include tablets() {
+      font-size: 24px;
+    }
+    @include phones() {
+      font-size: 20px;
+    }
+  }
+  &--header {
+    .logo__name {
+      @include phones() {
+        display: none;
+      }
+    }
+  }
+}
+.phone {
+  @include BebasNeueBook();
+  font-size: 28px;
+  line-height: 1;
+  color: $white;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  @include minDesctop() {
+    font-size: 26px;
+  }
+  @include tablets() {
+    font-size: 24px;
+  }
+  @include phones() {
+    font-size: 20px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    right:100%;
+    bottom: 0;
+    background-color: $white;
+    height: 1px;
+    width:100%;
+    transition: all 0.5s;
+  }
+  &:hover {
+    &:before {
+      right: 0;
+    }
+  }
+  &--footer {
+    @include minTablets() {
+      margin-bottom: 10px;
+    }
+  }
+}

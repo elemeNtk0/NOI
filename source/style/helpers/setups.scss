@@ -1,0 +1,139 @@
+@mixin centered($axis: 'both') {
+  position: absolute;
+
+  @if ($axis == 'both') {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if $axis == 'x' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $axis == 'y' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $axis == 'max' {
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+  }
+  @if $axis == 'stretchX' {
+    left:0;
+    right:0;
+  }
+  @if $axis == 'stretchY' {
+    top:0;
+    bottom:0;
+  }
+}
+
+@mixin desctop() {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin minDesctop() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin minTablets() {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}
+@mixin phones() {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin smallPhones() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin background() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//Basic styles for project
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.2;
+}
+body {
+  @include Lato;
+  height: 100%;
+  min-width: 300px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  color: $black;
+  background-color: $white;
+  display: table;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  border: none;
+  outline: none;
+}
+h1 {
+  margin: 0;
+}
+h1, h2 {
+  @include BebasNeueBook;
+  font-size: 28px;
+  @include tablets() {
+    font-size: 24px;
+  }
+  @include phones() {
+    font-size: 22px;
+  }
+}
+.wrapper {
+  display: table-row;
+  height: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+%clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

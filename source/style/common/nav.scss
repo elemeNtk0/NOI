@@ -1,0 +1,65 @@
+.nav {
+  background-color: $black;
+  color: $white;
+  &__container {
+    padding: 25px 80px 17px;
+     @include desctop() {
+      padding: 20px 50px 15px;
+    }
+    @include tablets() {
+      padding: 20px;
+      padding-bottom: 15px;
+    }
+    @include phones() {
+      padding: 15px 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    overflow: hidden;
+    &.active {
+      .nav__link:before {
+        right: 0;
+      }
+    }
+  }
+  &__link {
+    @include BebasNeueBook();
+    font-size: 28px;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    @include minDesctop() {
+      font-size: 26px;
+    }
+    @include tablets() {
+      font-size: 24px;
+    }
+    @include phones() {
+      font-size: 20px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      right:100%;
+      bottom: 0;
+      background-color: $white;
+      height: 2px;
+      width:100%;
+      transition: all 0.5s;
+    }
+    &:hover {
+      &:before {
+        right: 0;
+      }
+    }
+  }
+}

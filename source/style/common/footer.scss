@@ -1,0 +1,91 @@
+.footer {
+  background-color: $black;
+  padding: 35px 80px 28px;
+  color: $white;
+  @include desctop() {
+    padding: 20px 50px 15px;
+  }
+  @include tablets() {
+    padding: 20px;
+    padding-bottom: 15px;
+  }
+  @include phones() {
+    padding: 15px 20px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include minTablets() {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    @include tablets() {
+      margin-bottom: 10px;
+    }
+    .logo {
+      @include minTablets() {
+        justify-content: center;
+      }
+    }
+  }
+  &__address {
+    @include BebasNeueBook();
+    font-size: 28px;
+    line-height: 1;
+    color: $white;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    @include minDesctop() {
+      font-size: 26px;
+    }
+    @include tablets() {
+      font-size: 24px;
+    }
+    @include minTablets() {
+      margin-bottom: 10px;
+    }
+    @include phones() {
+      font-size: 20px;
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  &--footer {
+    @include tablets() {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  &__item {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      transform: scale(0.95);
+    }
+    &--vk {
+      background: url('../images/vk.png') no-repeat center;
+    }
+    &--insta {
+      background: url('../images/vk.png') no-repeat center;
+    }
+    &--fb {
+      background: url('../images/vk.png') no-repeat center;
+    }
+  }
+  &__link {
+    display: block;
+    height: 100%;
+  }
+}

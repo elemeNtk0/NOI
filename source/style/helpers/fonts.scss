@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/LatoLight/LatoLight.eot');
+  src:
+      url('../fonts/LatoLight/LatoLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/LatoLight/LatoLight.svg') format('svg'),
+      url('../fonts/LatoLight/LatoLight.woff') format('woff'),
+      url('../fonts/LatoLight/LatoLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Semibold/Lato-Semibold.eot');
+  src:
+      url('../fonts/Lato-Semibold/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Semibold/Lato-Semibold.svg') format('svg'),
+      url('../fonts/Lato-Semibold/Lato-Semibold.woff') format('woff'),
+      url('../fonts/Lato-Semibold/Lato-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BebasNeueBook';
+  src: url('../fonts/BebasNeueBook/BebasNeueBook.eot');
+  src:
+      url('../fonts/BebasNeueBook/BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/BebasNeueBook/BebasNeueBook.svg') format('svg'),
+      url('../fonts/BebasNeueBook/BebasNeueBook.woff') format('woff'),
+      url('../fonts/BebasNeueBook/BebasNeueBook.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin Lato() {
+  font-family: 'Lato', sans-serif;
+}
+@mixin BebasNeueBook() {
+  font-family: 'BebasNeueBook', sans-serif;
+}
