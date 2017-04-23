@@ -5,7 +5,6 @@ $('.slider-for').slick({
   arrows: false,
   fade: true,
   autoplay: true,
-  pauseOnFocus: true,
 });
 $('.slider-nav').slick({
   asNavFor: '.slider-for',
