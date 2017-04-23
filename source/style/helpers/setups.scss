@@ -92,7 +92,10 @@ body {
   width: 100%;
   color: $black;
   background-color: $white;
-  display: table;
+  // display: table;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 li {
   list-style: none;
@@ -123,8 +126,8 @@ h1, h2 {
   }
 }
 .wrapper {
-  display: table-row;
-  height: 100%;
+  // display: table-row;
+  // height: 100%;
 }
 .container {
   max-width: 1200px;
